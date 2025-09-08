@@ -17,6 +17,13 @@ Many molecules must travel from the cell surface to a pore on the nucleus (calle
     time ./a.out
     ```
 
+  Or, if you are on windows like me, run
+
+    ```
+    gcc -lm -03 main.c
+    Measure-Command { ./a.exe }
+    ```
+
 * We can also do this using other languages like Julia.
 
 ## Julia in a Jupyter notebook on an external server
