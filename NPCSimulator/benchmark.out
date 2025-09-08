@@ -1,0 +1,6 @@
+>>> Running C implementation
+C runtime: 8.53 seconds
+>>> Running Python implementation
+Elapsed time:  436.1613681316376
+>>> Running MATLAB implementation
+Elapsed time is 9.641800 seconds.

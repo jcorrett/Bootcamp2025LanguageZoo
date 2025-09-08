@@ -9,14 +9,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 
-# 1. Load MATLAB
 module load MATLAB/R2023b
 
-echo "==============================="
-echo "Benchmarking Algorithm"
-echo "==============================="
-
-# 2. Compile and run C code
 echo ">>> Running C implementation"
 cd C/src
 
@@ -25,7 +19,6 @@ gcc -O3 -lm main.c -o a.out
 
 cd ../../
 
-# 3. Run Python code
 echo ">>> Running Python implementation"
 
 cd python
@@ -34,7 +27,6 @@ python3 NPCSimulator.py
 
 cd ..
 
-# 4. Run MATLAB code
 echo ">>> Running MATLAB implementation"
 
 cd matlab
@@ -42,7 +34,3 @@ cd matlab
 matlab -batch "NPC_simulator"
 
 cd ..
-
-echo "==============================="
-echo "Benchmark complete"
-echo "==============================="

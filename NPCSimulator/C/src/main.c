@@ -20,7 +20,7 @@
 
 #define RAND genrand_real3()
 #define PI 3.14159265359
-#define nSample 20000
+#define nSample 2000
 
 /******************************************************************************/
 //  Variable declarations
@@ -117,6 +117,5 @@ int main( int argc, char *argv[] )
     //printf("Capture at t=%lf seconds.\n", t);
 
   }
-  
   return 0;
 } // finished main

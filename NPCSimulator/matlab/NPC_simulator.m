@@ -11,7 +11,7 @@ plotflag = false;
 dt = 0.001; % s
 ntmax = 1e6;
 
-NSample = 20000; % number of samples
+NSample = 2000; % number of samples
 
 % model parameters
 D = 10; %microns^2/second
