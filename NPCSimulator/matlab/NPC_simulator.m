@@ -1,3 +1,7 @@
+close all
+clear all
+clc
+
 % MCSB Bootcamp Dry
 % Jun Allard jun.allard@uci.edu
 % Simulate a transcription factor diffusing inside the cytoplasm, searching
@@ -5,6 +9,7 @@
 
 warning('off', 'all');
 
+% plotflag = true;
 plotflag = false;
 
 % numerical parameters
@@ -65,10 +70,14 @@ for iSample=1:NSample
             break;
         end
         
-        if plotflag % visualize
+        if plotflag && iSample == 1 && mod(nt-1,10)==0% visualize
             figure(1);
+            cla
             plot(x(1),x(2),'-ob');
+            plot(NPCLocation(1), NPCLocation(2),'or','markerfacecolor','r','markersize',10);
+            title(t)
             drawnow;
+            pause(10*dt)
         end % finished visualization
         
         t = t+dt;
@@ -85,7 +94,7 @@ toc % report the time
 
 if plotflag % visualize
 
-figure(2); clf; hold on; box on;
+    figure(2); clf; hold on; box on;
     histogram(tCapture)
     %set(gca,'yscale','log')
 

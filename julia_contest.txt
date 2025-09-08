@@ -1,0 +1,22 @@
+Competition time!
+
+Your task: code the NPC Simulator in Julia! (https://julialang.org/)
+
+Whoever can run the algorithm the fastest (while still producing correct 
+results) is the winner of the Bootcamp Dry Lab!
+
+The original code for your reference can be found here: 
+
+https://github.com/jcorrett/Bootcamp2025LanguageZoo
+
+(Bonus points* if you fork and clone the repo like how I taught you)
+
+While you may develop and test Julia however you want, please have your
+script be in the .jl file format, and name the script
+NPCSimulator_STUDENTID.jl (example: NPCSimulator_jcorrett.jl)
+
+When you are done, email your script to jcorrett@uci.edu
+
+
+
+*bonus points are purely for personal satistfaction and in no way, shape, or form give an advantage in the contest :)
