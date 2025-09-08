@@ -6,7 +6,7 @@ import time
 dt = 0.001  # s
 ntmax = int(1e6)
 
-NSample = 200  # number of samples
+NSample = 2000  # number of samples
 
 # model parameters
 D = 10  # microns^2/second

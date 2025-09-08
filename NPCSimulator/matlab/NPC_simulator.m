@@ -3,11 +3,15 @@
 % Simulate a transcription factor diffusing inside the cytoplasm, searching
 % for a nuclear pore complex
 
+warning('off', 'all');
+
+plotflag = false;
+
 % numerical parameters
 dt = 0.001; % s
 ntmax = 1e6;
 
-NSample = 2000; % number of samples
+NSample = 20000; % number of samples
 
 % model parameters
 D = 10; %microns^2/second
@@ -30,8 +34,8 @@ plot(NPCLocation(1), NPCLocation(2),'or','markerfacecolor','r','markersize',10);
 
 tic;
 
-parfor iSample=1:NSample
-%for iSample=1:NSample
+% parfor iSample=1:NSample
+for iSample=1:NSample
     
     % intial condition
     x = [L/2,0];
@@ -61,7 +65,7 @@ parfor iSample=1:NSample
             break;
         end
         
-        if 1 % visualize
+        if plotflag % visualize
             figure(1);
             plot(x(1),x(2),'-ob');
             drawnow;
@@ -79,8 +83,11 @@ toc % report the time
 
 %% analyze results
 
-figure(2); clf; hold on; box on;
-histogram(tCapture)
-%set(gca,'yscale','log')
+if plotflag % visualize
 
-display(mean(tCapture))
+figure(2); clf; hold on; box on;
+    histogram(tCapture)
+    %set(gca,'yscale','log')
+
+    display(mean(tCapture))
+end % finished visualization
