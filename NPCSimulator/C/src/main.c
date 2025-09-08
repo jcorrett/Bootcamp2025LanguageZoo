@@ -114,8 +114,9 @@ int main( int argc, char *argv[] )
 
     } //finished for-loop
 
-    printf("Capture at t=%lf seconds.\n", t);
+    //printf("Capture at t=%lf seconds.\n", t);
 
   }
+  
   return 0;
 } // finished main
